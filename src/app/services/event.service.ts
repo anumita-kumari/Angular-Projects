@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EventService {
+  private baseUrl = 'http://localhost:3000';
+  constructor(public httpService: HttpClient) {}
 
-  constructor() { }
+  getEventList() {
+    this.httpService.get(this.baseUrl).subscribe((res) => {
+      console.log(res);
+    });
+  }
 }
