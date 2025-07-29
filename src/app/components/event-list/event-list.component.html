@@ -1,1 +1,22 @@
-<p>event-list works!</p>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Organizer</th>
+    <th>Available Seats</th>
+  </tr>
+  <tr *ngFor="let rows of eventList">
+    <td>{{ rows.id | async }}</td>
+    <td>{{ rows.title }}</td>
+    <td>{{ rows.description }}</td>
+    <td>{{ rows.category }}</td>
+    <td>{{ rows.date }}</td>
+    <td>{{ rows.location }}</td>
+    <td>{{ rows.organizer }}</td>
+    <td>{{ rows.availableSeats }}</td>
+  </tr>
+</table>

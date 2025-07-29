@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
@@ -13,6 +14,7 @@ import { EventDetailComponent } from './components/event-detail/event-detail.com
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
 import { CategoryPipe } from './pipes/category.pipe';
 import { DateRangePipe } from './pipes/date-range.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { DateRangePipe } from './pipes/date-range.pipe';
     CategoryPipe,
     DateRangePipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MaterialModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -6,11 +6,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EventService {
   private baseUrl = 'http://localhost:3000';
+
   constructor(public httpService: HttpClient) {}
 
   getEventList() {
-    this.httpService.get(this.baseUrl).subscribe((res) => {
-      console.log(res);
-    });
+    let apiURL = this.baseUrl + 'dataList';
+    this.httpService
+      .get('http://localhost:3000/dataList', { responseType: 'text' })
+      .subscribe((res) => {
+        console.log(res);
+      });
   }
 }
