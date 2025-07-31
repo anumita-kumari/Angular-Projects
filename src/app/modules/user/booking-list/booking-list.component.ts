@@ -8,7 +8,7 @@ import { EventService, Booking } from 'src/app/services/event.service';
   styleUrls: ['./booking-list.component.css'],
 })
 export class BookingListComponent implements OnInit {
-  public dataSource: any = new MatTableDataSource<Booking>([]);
+  public dataSource!: MatTableDataSource<Booking>;
 
   public displayedColumns: String[] = [
     'fullName',
@@ -22,7 +22,8 @@ export class BookingListComponent implements OnInit {
   ngOnInit() {
     this.eventService.fetchBookingDetails().subscribe((res: Booking) => {
       console.log(res);
-      this.dataSource = res;
+      this.dataSource = new MatTableDataSource<Booking>([res]);
     });
   }
 }
+``;
