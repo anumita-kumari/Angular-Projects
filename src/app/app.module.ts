@@ -15,6 +15,7 @@ import { BookingFormComponent } from './components/booking-form/booking-form.com
 import { CategoryPipe } from './pipes/category.pipe';
 import { DateRangePipe } from './pipes/date-range.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CategoryPipe,
     DateRangePipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MaterialModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

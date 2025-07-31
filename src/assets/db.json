@@ -31,7 +31,7 @@
       "location": "Remote",
       "organizer": "Frontend Gurus",
       "imageUrl": "assets/images/react-bootcamp.jpg",
-      "availableSeats": 60
+      "availableSeats": 0
     },
     {
       "id": 4,
@@ -54,6 +54,40 @@
       "organizer": "Founders Club",
       "imageUrl": "assets/images/pitch-day.jpg",
       "availableSeats": 150
+    },
+    {
+      "id": 6,
+      "title": "Stand Up Comedy Night",
+      "description": "Watch standup comedians perform live.",
+      "category": "Entertainment",
+      "date": "2025-08-25",
+      "location": "Bangalore, India",
+      "organizer": "YTF Club",
+      "imageUrl": "assets/images/pitch-day.jpg",
+      "availableSeats": 100
+    }
+  ],
+  "bookings": [
+    {
+      "fullName": "Anumita Sharma",
+      "email": "anumita@example.com",
+      "phoneNumber": "9876543210",
+      "eventId": 3,
+      "numberOfTickets": 2,
+      "notes": "Excited to attend!",
+      "bookingDate": "2025-08-01T10:15:00Z",
+      "termsAccepted": true
+    },
+    {
+      "id": "6cd4",
+      "fullName": null,
+      "email": null,
+      "phone": null,
+      "noOfTickets": null,
+      "notes": null,
+      "terms": null,
+      "bookingDate": "2025-07-30T13:31:31.309Z",
+      "eventId": "1"
     }
   ]
 }

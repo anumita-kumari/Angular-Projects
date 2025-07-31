@@ -1,1 +1,25 @@
-<p>event-detail works!</p>
+<div class="container">
+  <h1>Event Detail</h1>
+  <div *ngIf="event">
+    <h2>{{ event?.title }}</h2>
+    <p><strong>Description:</strong> {{ event?.description }}</p>
+    <p><strong>Category:</strong> {{ event?.category }}</p>
+    <p><strong>Date:</strong> {{ event?.date | date }}</p>
+    <p><strong>Location:</strong> {{ event?.location }}</p>
+    <p><strong>Organizer:</strong> {{ event?.organizer }}</p>
+    <p><strong>Available Seats:</strong> {{ event?.availableSeats }}</p>
+    <div *ngIf="event?.availableSeats > 0" else disabledButton>
+      <button mat-raised-button color="primary" (click)="bookSeat()">
+        Book a seat
+      </button>
+    </div>
+    <ng-template #disabledButton>
+      <button mat-raised-button color="primary" (click)="backToList()">
+        Back to Events
+      </button>
+    </ng-template>
+  </div>
+  <div *ngIf="!event">
+    <p>Loading event details...</p>
+  </div>
+</div>

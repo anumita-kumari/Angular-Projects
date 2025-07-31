@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-<table mat-table [dataSource]="eventList">
+<!-- <table mat-table [dataSource]="eventList">
   <ng-container *matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>Id</th>
     <td mat-cell *matCellDef="let element">{{ element.id }}</td>
@@ -61,4 +61,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let rows; columns: displayedColumns"></tr>
-</table>
+</table> -->
